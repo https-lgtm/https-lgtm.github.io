@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="jv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sewa Squad Verif MLBB</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Sugeng Ambal Warsa, Han!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,304 +13,116 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-      color: #e2e8f0;
-      padding: 20px;
+      background: #0a0a0a;
+      background-image: 
+        radial-gradient(circle at 20% 50%, #ff006e 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, #8338ec 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, #3a86ff 0%, transparent 50%);
       min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
     }
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .container {
+    .card {
+      background: rgba(15, 15, 15, 0.8);
+      backdrop-filter: blur(20px);
       max-width: 650px;
-      margin: 0 auto;
-      background: rgba(30, 41, 59, 0.8);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-      border: 1px solid rgba(148, 163, 184, 0.2);
-      animation: fadeInUp 0.8s ease-out;
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    h1 {
-      text-align: center;
-      background: linear-gradient(90deg, #22c55e, #38bdf8, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-size: 200% auto;
-      animation: textShine 3s linear infinite;
-      margin-bottom: 24px;
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-    @keyframes textShine {
-      to { background-position: 200% center; }
-    }
-    h2 {
-      color: #38bdf8;
-      font-size: 1.15rem;
-      margin: 28px 0 14px 0;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #334155;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      animation: slideInLeft 0.6s ease-out;
-    }
-    @keyframes slideInLeft {
-      from { opacity: 0; transform: translateX(-20px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    .squad-list {
-      list-style: none;
-      margin-bottom: 24px;
-    }
-    .squad-list li {
-      padding: 14px 16px;
-      margin: 10px 0;
-      background: rgba(15, 23, 42, 0.6);
-      border-radius: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-left: 4px solid #475569;
-      transition: all 0.3s ease;
-      animation: fadeIn 0.5s ease-out backwards;
-    }
-    .squad-list li:nth-child(1) { animation-delay: 0.1s; }
-    .squad-list li:nth-child(2) { animation-delay: 0.2s; }
-    .squad-list li:nth-child(3) { animation-delay: 0.3s; }
-    .squad-list li:nth-child(4) { animation-delay: 0.4s; }
-    .squad-list li:nth-child(5) { animation-delay: 0.5s; }
-    .squad-list li:nth-child(6) { animation-delay: 0.6s; }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-    .squad-list li:hover {
-      transform: translateX(8px) scale(1.02);
-      background: rgba(30, 41, 59, 0.9);
-    }
-    .available { 
-      border-left-color: #22c55e;
-      box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);
-    }
-    .available:hover {
-      box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
-    }
-    .full { 
-      border-left-color: #ef4444;
-      opacity: 0.6;
-    }
-    .status {
-      font-weight: 600;
-      font-size: 0.9rem;
-      padding: 4px 10px;
-      border-radius: 20px;
-    }
-    .available .status { 
-      color: #22c55e;
-      background: rgba(34, 197, 94, 0.15);
-      animation: pulse 2s infinite;
-    }
-    .full .status { 
-      color: #ef4444;
-      background: rgba(239, 68, 68, 0.15);
-    }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.05); opacity: 0.8; }
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 16px 0;
-      background: rgba(15, 23, 42, 0.6);
-      border-radius: 12px;
-      overflow: hidden;
-      animation: fadeIn 0.8s ease-out 0.7s backwards;
-    }
-    th, td {
-      padding: 14px 16px;
-      text-align: left;
-      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
-    }
-    th {
-      background: rgba(30, 41, 59, 0.8);
-      color: #38bdf8;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    tr {
-      transition: background 0.2s ease;
-    }
-    tr:hover td {
-      background: rgba(56, 189, 248, 0.08);
-    }
-    tr:last-child td { border-bottom: none; }
-    td:last-child {
-      font-weight: 600;
-      color: #a5f3fc;
-    }
-    .sub-text {
-      font-size: 0.85rem;
-      color: #94a3b8;
-      margin: -8px 0 14px 0;
-      animation: fadeIn 0.8s ease-out 0.8s backwards;
-    }
-    .note {
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(249, 115, 22, 0.15));
-      padding: 18px;
-      border-radius: 12px;
-      border: 1px solid rgba(245, 158, 11, 0.3);
-      margin-top: 24px;
-      font-weight: 600;
-      text-align: center;
-      animation: bounceIn 1s ease-out 1s backwards, glow 3s ease-in-out infinite 2s;
-    }
-    @keyframes bounceIn {
-      0% { opacity: 0; transform: scale(0.3); }
-      50% { opacity: 1; transform: scale(1.05); }
-      70% { transform: scale(0.9); }
-      100% { transform: scale(1); }
+      padding: 50px 40px;
+      border-radius: 25px;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      box-shadow: 
+        0 0 40px rgba(255, 0, 110, 0.5),
+        0 0 80px rgba(131, 56, 236, 0.3),
+        inset 0 0 40px rgba(58, 134, 255, 0.1);
+      position: relative;
+      animation: glow 3s ease-in-out infinite alternate;
     }
     @keyframes glow {
-      0%, 100% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.2); }
-      50% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.5); }
+      from { box-shadow: 0 0 40px rgba(255, 0, 110, 0.5), 0 0 80px rgba(131, 56, 236, 0.3); }
+      to { box-shadow: 0 0 60px rgba(255, 0, 110, 0.8), 0 0 100px rgba(131, 56, 236, 0.5); }
+    }
+    h1 {
+      background: linear-gradient(90deg, #ff006e, #fb5607, #ffbe0b, #8338ec, #3a86ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 2.5rem;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 30px;
+      text-shadow: 0 0 30px rgba(255, 255, 0.5);
+      animation: textShine 4s linear infinite;
+    }
+    @keyframes textShine {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+    p {
+      color: #e0e0e0;
+      line-height: 1.9;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+    .highlight {
+      color: #ffbe0b;
+      font-weight: 700;
+      text-shadow: 0 0 15px #ffbe0b;
+    }
+    .signature {
+      margin-top: 35px;
+      font-weight: 900;
+      font-size: 1.4rem;
+      text-align: center;
+      background: linear-gradient(90deg, #ff006e, #8338ec);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 20px rgba(255, 0, 110, 0.8);
     }
     .emoji {
       display: inline-block;
-      animation: float 3s ease-in-out infinite;
+      animation: bounce 1.5s ease-in-out infinite;
     }
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-5px); }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
     .fire {
-      animation: flicker 1.5s ease-in-out infinite alternate;
+      position: absolute;
+      top: -20px;
+      right: -10px;
+      font-size: 3rem;
+      animation: flicker 0.5s alternate infinite;
     }
     @keyframes flicker {
-      0% { opacity: 1; transform: scale(1) rotate(-2deg); }
-      100% { opacity: 0.8; transform: scale(1.1) rotate(2deg); }
-    }
-    .wa-btn {
-      display: block;
-      width: 100%;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      color: white;
-      text-decoration: none;
-      text-align: center;
-      padding: 16px;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-top: 20px;
-      transition: all 0.3s ease;
-      animation: bounceIn 1s ease-out 1.2s backwards, wabounce 2s ease-in-out infinite 3s;
-      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
-    }
-    .wa-btn:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
-    }
-    @keyframes wabounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-    }
-    .wa-btn svg {
-      width: 24px;
-      height: 24px;
-      margin-right: 8px;
-      vertical-align: middle;
-      animation: ring 2s ease-in-out infinite 4s;
-    }
-    @keyframes ring {
-      0%, 100% { transform: rotate(0); }
-      10%, 30% { transform: rotate(-10deg); }
-      20%, 40% { transform: rotate(10deg); }
-      50% { transform: rotate(0); }
+      from { opacity: 1; transform: scale(1) rotate(-5deg); }
+      to { opacity: 0.8; transform: scale(1.1) rotate(5deg); }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1><span class="emoji fire">🔥</span> SEWA SQUAD VERIF MLBB <span class="emoji fire">🔥</span></h1>
-    
-    <h2><span class="emoji">🟢</span> SQUAD VERIF YANG KOSONG HARI INI</h2>
-    <ul class="squad-list">
-      <li class="available">
-        <span>»» ONIC ( ONIC ESPORTS )</span>
-        <span class="status">Kosong 2 ✅</span>
-      </li>
-      <li class="full">
-        <span>»» ONIC ( ONIC ESPORTS ID )</span>
-        <span class="status">FULL ❌</span>
-      </li>
-      <li class="full">
-        <span>»» #1 ( Generation Z )</span>
-        <span class="status">FULL ❌</span>
-      </li>
-      <li class="full">
-        <span>»» KOL ( MLBB INFLUENCER )</span>
-        <span class="status">FULL ❌</span>
-      </li>
-      <li class="available">
-        <span>»» 969 ( ANOMALI 969. )</span>
-        <span class="status">Kosong 1 ✅</span>
-      </li>
-      <li class="full">
-        <span>»» EVOS ( EVOS ESPORTS. )</span>
-        <span class="status">FULL ❌</span>
-      </li>
-    </ul>
-
-    <h2><span class="emoji">💸</span> Harga Sewa (Untuk Sewa Pertama)</h2>
-    <table>
-      <tr>
-        <th>Durasi</th>
-        <th>Harga</th>
-      </tr>
-      <tr><td>3 Hari</td><td>9.000</td></tr>
-      <tr><td>7 Hari</td><td>15.000</td></tr>
-      <tr><td>15 Hari</td><td>30.000</td></tr>
-      <tr><td>30 Hari</td><td>45.000</td></tr>
-      <tr><td>90 Hari</td><td>135.000</td></tr>
-      <tr><td>Permanent</td><td>2.000.000 <small>(Bisa dicicil max 2 bulan, DP 25%)</small></td></tr>
-    </table>
-
-    <h2><span class="emoji">💸</span> Harga untuk Perpanjang</h2>
-    <p class="sub-text">Yang masih ada di squad / durasi sewa masih ada</p>
-    <table>
-      <tr>
-        <th>Durasi</th>
-        <th>Harga</th>
-      </tr>
-      <tr><td>3 Hari</td><td>8.000</td></tr>
-      <tr><td>7 Hari</td><td>13.800</td></tr>
-      <tr><td>15 Hari</td><td>26.500</td></tr>
-      <tr><td>30 Hari</td><td>40.000</td></tr>
-      <tr><td>90 Hari</td><td>120.000</td></tr>
-    </table>
-
-    <div class="note">
-      Untuk Order bisa langsung chat admin aja, Bisa masuk dulu baru bayar <span class="emoji fire">🔥🔥🔥</span>
-    </div>
-
-    <a href="https://wa.me/6281385647137?text=Halo%20min%2C%20mau%20sewa%20squad%20verif%20MLBB" class="wa-btn" target="_blank">
-      <svg viewBox="0 0 32 32" fill="currentColor">
-        <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.242-.558-.242-.339 0-.972.164-1.313.164-.174 0-.468.243-.75.243-.288 0-.666-.379-1.174-.69-.745-.446-1.435-.987-1.99-1.7-.137-.189-.234-.458-.234-.458s.006.33-.006.33c-.223.414-.476.886-.476 1.487 0 .713.402 1.442.463 1.623.595 1.614 1.44 2.971 2.507 4.092.663.703 1.387 1.288 2.186 1.741.404.23.805.43 1.218.61.558.245 1.093.42 1.65.526.536.11 1.12.11 1.662 0 .464-.097 1.44-.553 1.638-1.087.21-.524.21-1.007.157-1.103-.052-.096-.22-.158-.558-.284-.339-.126-2.004-.986-2.33-1.164-.33-.18-.586-.15-.86.09-.27.24-1.05 1.217-1.286 1.458-.236.24-.38.27-.71.104-.33-.166-1.387-.508-2.64-1.62-.943-.84-1.575-1.87-1.76-2.188-.184-.317-.02-.487.135-.63.14-.13.31-.345.464-.516.155-.17.207-.287.31-.48.104-.192.052-.36-.026-.5-.08-.143-.7-1.688-.96-2.31-.254-.608-.514-.524-.71-.536-.184-.01-.4-.01-.613-.01-.214 0-.558.08-.85.38-.29.3-1.114 1.088-1.114 2.653 0 1.565 1.14 3.08 1.3 3.295.16.215 2.243 3.422 5.43 4.798.762.328 1.357.524 1.82.67.765.242 1.462.208 2.014.126.676-.096 2.08-.85 2.372-1.67.29-.82.29-1.52.202-1.67-.086-.15-.32-.24-.67-.402z"/>
-      </svg>
-      CHAT ADMIN VIA WHATSAPP
-    </a>
+  <div class="card">
+    <div class="fire">🔥</div>
+    <h1>SUGENG AMBAL WARSA, HAN! <span class="emoji">🎉</span></h1>
+    <p>
+      Mbok menowo aku jarang ngomong ngene, tapi aku pengen kowe reti nek aku <span class="highlight">bangga banget</span> duwe konco koyo kowe. Aku reti kowe wis nglewati akeh hal sing ora gampang, keselmu, perjuanganmu sing wong liyo ra pati reti, aku neng kene dadi seksine.
+    </p>
+    <p>
+      Mugo-mugo neng umurmu sing anyar iki, <span class="highlight">Gusti Allah maringi kowe wektu nggo luwih bahagia</span> lan ngrasakke ayem. Ojo ngeroso dewean nek lagi sambat utawa ngeroso abot karo urip, mergo pundakku bakal tetep neng kene nggo kowe crito.
+    </p>
+    <p>
+      Matur nuwun wis bertahan sampe saiki, matur nuwun wis dadi <span class="highlight">Farhan sing paling apik</span> sing tau tak kenal.
+    </p>
+    <p>
+      Sehat terus, Han. Mugo dalanmu dipadangi, kabeh pengenmu siji-siji ditekakne. Aku pengen weruh kowe <span class="highlight">sukses lan ngguyu bareng aku</span> sampe awake dewe podo-podo tuone mengko.
+    </p>
+    <p class="signature">
+      HBD, BRO! ⚡🔥
+    </p>
   </div>
 </body>
 </html>
